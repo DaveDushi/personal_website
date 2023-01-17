@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>My Webite</title>
+    <link rel="stylesheet" href="css/style.css">
+    <script src="js/utils.js"></script>
+    <script src="https://platform.linkedin.com/in.js" type="text/javascript"></script>
+</head>
+<body>
+<nav>
+    <a href="#about-me">About Me</a>
+    <a href="#hobbies">Hobbies</a>
+    <a href="#education">Education</a>
+    <a href="#army-service">Army Service</a>
+    <a href="#contact-me">Contact Me</a>
+</nav>
+<img id="skydive" src="website_media/skydiving.jpg" alt="">
+
+<section id="about-me">
+    <h2>About Me</h2>
+    <p>My name is David Dusi, I'm 23 years old and currently studying Computer Science in Reichman University.
+        I was born and raised as an Orthodox Jew in the Brooklyn Syrian Community.
+        At the age of 18 I came to Israel as part of a gap year program and studied in Yeshivat Birkat Moshe.
+        From the second I stepped foot in Israel I fell in love with the people and culture and decided to stay.
+        I joined the Hesder Army program in my yeshiva and drafted to the IDF in August 2019.
+        I served in the Combat Engineering unit for 20 months.
+        After my service I decided I want to study Computer Science and chose Reichman University's program.
+    </p>
+    <img class="hobby-pic" src="website_media/family1.jpg">
+</section>
+
+<section id="hobbies">
+    <h2>Hobbies</h2>
+    <div>
+        <h3>Sports</h3>
+        <img class="hobby-pic" src="website_media/hockey.jpg" alt="">
+        <img class="hobby-pic" src="website_media/marathon.jpeg" alt="">
+        <img class="hobby-pic" src="website_media/snowboarding.jpg" alt="">
+
+    </div>
+    <div>
+        <h3>Woodworking</h3>
+        <img class="hobby-pic" src="website_media/skateboard4.jpg" alt="">
+        <img class="hobby-pic" src="website_media/skateboard3.jpg" alt="">
+    </div>
+    <div>
+        <h3>Hiking</h3>
+        <img class="hobby-pic" src="website_media/hiking3.jpeg" alt="">
+        <img class="hobby-pic" src="website_media/hiking2.jpg" alt=""><br>
+        <img class="hobby-pic" src="website_media/hiking1.jpg" alt="">
+        <img class="hobby-pic" src="website_media/hiking4.jpg" alt="">
+    </div>
+</section>
+<section id="education">
+   <div>
+        <h2>Education</h2>
+        <ul>
+            <li>Barkai Elementary School 2004-2013</li>
+            <li>YDE High-school 2013-2017</li>
+            <li>Yeshivat Birkat Moshe 2017-2019, 2021</li>
+            <li>Reichman University Comp-Sci 2021-present</li>
+        </ul>
+       <h2 >Skills</h2>
+       <ul>
+           <li>Coding Languages
+                <ul>
+                    <li>Java</li>
+                    <li>Python</li>
+                    <li>C</li>
+                    <li>HTML</li>
+                    <li>JavaScript</li>
+                    <li>CSS</li>
+                </ul>
+           </li>
+           <li>Woodworking</li>
+       </ul>
+   </div>
+</section>
+<section id ="army-service">
+    <h2>Army Service</h2>
+    <ol>
+        <li>4 months Basic training</li>
+        <li>4 months Advanced training</li>
+        <li>4 months Sergent Course</li>
+        <li>8 months Sergent in basic + advanced training</li>
+    </ol>
+    <img class="hobby-pic" src="website_media/army8month.jpeg" alt="">
+    <img class="hobby-pic" src="website_media/army2.jpeg" alt=""><br>
+    <img class="hobby-pic" src="website_media/armyMak.jpeg" alt="">
+    <img class="hobby-pic" src="website_media/army1.jpg" alt="">
+</section>
+<section id="contact-me">
+    <h2>Contact Me</h2>
+    <form id="contact-form" action="">
+        <label for="fname">First name:</label><br>
+        <input type="text" id="fname" name="fname"><br>
+        <label for="lname">Last name:</label><br>
+        <input type="text" id="lname" name="lname"><br>
+        <label for="email">Email:</label><br>
+        <input type="text" id="email" name="email"><br>
+        <label for="message">Message:</label><br>
+        <textarea id="message" ></textarea><br><br>
+        <input type="submit" value="Send">
+    </form>
+    <br>
+    <div>
+        Email: david.dusi@post.runi.il <br>
+        <div class="badge-base LI-profile-badge" data-locale="en_US" data-size="medium" data-theme="light" data-type="HORIZONTAL" data-vanity="david-d-929172208" data-version="v1">
+            LinkedIn: <a class="badge-base__link LI-simple-link" href="https://il.linkedin.com/in/david-d-929172208?trk=profile-badge">David D.</a>
+        </div>
+
+    </div>
+</section>
+<br>
+
+<button onclick="clickButton()">Click Me</button>
+</body>
+</html>
