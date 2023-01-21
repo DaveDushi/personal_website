@@ -1,7 +1,277 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+}
+
+:root {
+    background-color: #8ab4f8;
+}
+
+/* nav bar */
+#logo {
+    height: 45px;
+    top: 0;
+    left: 0;
+    position: absolute;
+}
+#nav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: proxima-nova, sans-serif;
+    position: fixed;
+    background-color: #2d323d;
+    width: 100%;
+    top: 0;
+    padding-top: 35px;
+    margin: 0;
+    height: 50px;
+}
+.icon {
+    color: white;
+    padding: 10px;
+    font-size: 24px;
+    top: 0;
+    right: 0;
+    position: absolute;
+}
+.icon:hover {
+    background-color: #8ab4f8;
+}
+
+#nav #pages {
+    display: none;
+    flex-direction: column;
+
+}
+#social-media {
+    display: none;
+}
+
+#nav .sections {
+    color: white;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 17px;
+    text-transform: uppercase;
+    font-weight: 700;
+    font-style: normal;
+    letter-spacing: 0.08em;
+}
+
+.sections:hover {
+    background-color: #8ab4f8;
+}
+
+
 #skydive {
     width: 80%;
 }
 
 .hobby-pic {
-    width: 15%;
+    width: 100%;
+}
+
+
+/*about me section*/
+#about-me {
+    display: grid;
+    grid-template: 1fr 1fr / 100%;
+    margin-top: 30px;
+}
+#about-me-div {
+    grid-area: 2;
+    margin-left: 10px;
+    margin-right: 10px;
+
+}
+#about-me-title {
+text-align: center;
+}
+#about-me-img {
+    width: 100%;
+    height: auto;
+    border-radius: 0;
+    align-self: center;
+    grid-area: 1;
+}
+
+/*hobbies section*/
+#hobbies {
+    display: grid;
+    grid-template-rows: 25px 1fr 1fr 1fr;
+}
+#hobbies-title {
+    text-align: center;
+    margin: 10px;
+}
+.hobby-titles {
+    text-align: center;
+
+}
+
+/*Education*/
+/* The actual timeline (the vertical ruler) */
+.timeline {
+    background-color: #474e5d;
+    font-family: Helvetica, sans-serif;
+    position: relative;
+    max-width: 100%;
+    margin: 0 auto;
+}
+
+/* The actual timeline (the vertical ruler) */
+.timeline::after {
+    content: '';
+    position: absolute;
+    width: 6px;
+    background-color: white;
+    top: 0;
+    bottom: 0;
+    left: 50%;
+    margin-left: -3px;
+}
+
+/* Container around content */
+.timeline-container {
+    padding: 10px 40px;
+    position: relative;
+    background-color: inherit;
+    width: 50%;
+}
+
+/* The circles on the timeline */
+.timeline-container::after {
+    content: '';
+    position: absolute;
+    width: 25px;
+    height: 25px;
+    right: -17px;
+    background-color: white;
+    border: 4px solid #FF9F55;
+    top: 15px;
+    border-radius: 50%;
+    z-index: 1;
+}
+
+/* Place the container to the left */
+.left {
+    left: 0;
+}
+
+/* Place the container to the right */
+.right {
+    left: 50%;
+}
+
+/* Add arrows to the left container (pointing right) */
+.left::before {
+    content: " ";
+    height: 0;
+    position: absolute;
+    top: 22px;
+    width: 0;
+    z-index: 1;
+    right: 30px;
+    border: medium solid white;
+    border-width: 10px 0 10px 10px;
+    border-color: transparent transparent transparent white;
+}
+
+/* Add arrows to the right container (pointing left) */
+.right::before {
+    content: " ";
+    height: 0;
+    position: absolute;
+    top: 22px;
+    width: 0;
+    z-index: 1;
+    left: 30px;
+    border: medium solid white;
+    border-width: 10px 10px 10px 0;
+    border-color: transparent white transparent transparent;
+}
+
+/* Fix the circle for containers on the right side */
+.right::after {
+    left: -16px;
+}
+
+/* The actual content */
+.timeline-content {
+    padding: 15px 30px;
+    background-color: white;
+    position: relative;
+    border-radius: 6px;
+}
+
+
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {
+    .sections { padding: 16px 10px; }
+
+}
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (min-width: 600px) {
+    #nav {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        font-family: proxima-nova, sans-serif;
+        font-weight: 700;
+        font-style: normal;
+        text-transform: uppercase;
+        font-size: 16px;
+        letter-spacing: 0.08em;
+        position: fixed;
+        background-color: #2d323d;
+        width: 100%;
+        top: 0;
+        padding: 0;
+        margin: 0;
+    }
+    .icon {
+        display: none;
+    }
+    #nav #pages {
+        padding-left: 10px;
+        display: flex;
+        flex-direction: row;
+    }
+    #social-media {
+        display: flex;
+
+    }
+    .sm-icon {
+        margin-right: 10px;
+        color: white;
+    }
+
+    .sections{
+        color: white;
+        text-align: center;
+        text-decoration: none;
+    }
+}
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px) {
+    .sections { padding: 16px 24px; }
+    #about-me { grid-template: 24px 1fr / 50% 50%; }
+    #about-me-div { grid-area: 2; }
+    #about-me-img { grid-area: 2 / 2 ; border-radius: 10%;}
+}
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) {
+
+}
+
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media only screen and (min-width: 1200px) {
+
 }

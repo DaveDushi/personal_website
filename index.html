@@ -5,62 +5,143 @@
     <title>My Webite</title>
     <link rel="stylesheet" href="css/style.css">
     <script src="js/utils.js"></script>
-    <script src="https://platform.linkedin.com/in.js" type="text/javascript"></script>
+    <!-- icons style sheet -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 <body>
-<nav>
-    <a href="#about-me">About Me</a>
-    <a href="#hobbies">Hobbies</a>
-    <a href="#education">Education</a>
-    <a href="#army-service">Army Service</a>
-    <a href="#contact-me">Contact Me</a>
-</nav>
-<img id="skydive" src="website_media/skydiving.jpg" alt="">
+<header>
+    <nav id="nav">
+        <a href="/" title="Home">
+            <img id="logo" src="website_media/DD.png" >
+        </a>
+        <div  id="pages" >
+            <a class="sections" href="#about-me">About</a>
+            <a class="sections" href="#hobbies">Hobbies</a>
+            <a class="sections" href="#experience">Education</a>
+            <a class="sections" href="#contact-me">Contact</a>
+        </div>
+        <!-- resize script -->
+        <script src="js/resize.js"></script>
+
+        <div id="social-media">
+            <a class="sm-icon" href="mailto:david.dusi@hotmail.com" title="email" target="_blank" >
+                <i class="fa fa-envelope"></i>
+            </a> <br>
+            <a class="sm-icon" href="https://il.linkedin.com/in/david-d-929172208?trk=profile-badge" title="linkedin" target="_blank">
+                <i class="fa fa-linkedin"></i>
+            </a>
+
+        </div>
+        <a href="javascript:void(0);" class="icon" onclick="openNav()">
+            <i class="fa fa-bars"></i>
+        </a>
+    </nav>
+</header>
 
 <section id="about-me">
-    <h2>About Me</h2>
-    <p>My name is David Dusi, I'm 23 years old and currently studying Computer Science in Reichman University.
-        I was born and raised as an Orthodox Jew in the Brooklyn Syrian Community.
-        At the age of 18 I came to Israel as part of a gap year program and studied in Yeshivat Birkat Moshe.
-        From the second I stepped foot in Israel I fell in love with the people and culture and decided to stay.
-        I joined the Hesder Army program in my yeshiva and drafted to the IDF in August 2019.
-        I served in the Combat Engineering unit for 20 months.
-        After my service I decided I want to study Computer Science and chose Reichman University's program.
-    </p>
-    <img class="hobby-pic" src="website_media/family1.jpg">
+    <div id="about-me-div">
+        <h2 id="about-me-title">About Me</h2>
+        <p id="about-me-p">My name is David Dusi, I'm 23 years old and currently studying Computer Science in Reichman University.
+            I was born and raised as an Orthodox Jew in the Brooklyn Syrian Community.
+            At the age of 18 I came to Israel as part of a gap year program and studied in Yeshivat Birkat Moshe.
+            From the second I stepped foot in Israel I fell in love with the people and culture and decided to stay.
+            I joined the Hesder Army program in my yeshiva and drafted to the IDF in August 2019.
+            I served in the Combat Engineering unit for 20 months.
+            After my service I decided I want to study Computer Science and chose Reichman University's program.
+        </p>
+    </div>
+
+    <img id="about-me-img" id="skydive" src="website_media/skydiving.jpg" alt="skydive image">
 </section>
 
 <section id="hobbies">
-    <h2>Hobbies</h2>
+    <h2 id="hobbies-title">Hobbies</h2>
     <div>
-        <h3>Sports</h3>
-        <img class="hobby-pic" src="website_media/hockey.jpg" alt="">
-        <img class="hobby-pic" src="website_media/marathon.jpeg" alt="">
-        <img class="hobby-pic" src="website_media/snowboarding.jpg" alt="">
+        <h3 class="hobby-titles" id="sports" >Sports</h3>
+        <img class="hobby-pic" src="website_media/hockey.jpg" alt=""><br>
+        <img class="hobby-pic" src="website_media/marathon.jpeg" alt=""> <br>
+        <img class="hobby-pic" src="website_media/snowboarding.jpg" alt=""> <br>
 
     </div>
     <div>
-        <h3>Woodworking</h3>
+        <h3 class="hobby-titles" id="woodworking">Woodworking</h3>
         <img class="hobby-pic" src="website_media/skateboard4.jpg" alt="">
         <img class="hobby-pic" src="website_media/skateboard3.jpg" alt="">
     </div>
     <div>
-        <h3>Hiking</h3>
-        <img class="hobby-pic" src="website_media/hiking3.jpeg" alt="">
+        <h3 class="hobby-titles" id="hiking">Hiking</h3>
+        <!-- <img class="hobby-pic" src="website_media/hiking3.jpeg" alt="">
         <img class="hobby-pic" src="website_media/hiking2.jpg" alt=""><br>
         <img class="hobby-pic" src="website_media/hiking1.jpg" alt="">
         <img class="hobby-pic" src="website_media/hiking4.jpg" alt="">
+        <div class="slideshow-container"> -->
+
+            <!-- Full-width images with number and caption text -->
+            <div class="mySlides fade">
+                <img src="website_media/hiking3.jpeg" style="width:100%">
+                <div class="text">Caption Text</div>
+            </div>
+
+            <div class="mySlides fade">
+                <img src="website_media/hiking2.jpg" style="width:100%">
+                <div class="text">Caption Two</div>
+            </div>
+
+            <div class="mySlides fade">
+                <img src="website_media/hiking1.jpg" style="width:100%">
+                <div class="text">Caption Three</div>
+            </div>
+
+            <div class="mySlides fade">
+                <img src="website_media/hiking4.jpg" style="width:100%">
+                <div class="text">Caption Three</div>
+            </div>
+
+            <!-- Next and previous buttons -->
+            <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+            <a class="next" onclick="plusSlides(1)">&#10095;</a>
+        </div>
+        <br>
+
+        <!-- The dots/circles -->
+        <div style="text-align:center">
+            <span class="dot" onclick="currentSlide(1)"></span>
+            <span class="dot" onclick="currentSlide(2)"></span>
+            <span class="dot" onclick="currentSlide(3)"></span>
+            <span class="dot" onclick="currentSlide(4)"></span>
+        </div>
     </div>
 </section>
 <section id="education">
    <div>
         <h2>Education</h2>
-        <ul>
-            <li>Barkai Elementary School 2004-2013</li>
-            <li>YDE High-school 2013-2017</li>
-            <li>Yeshivat Birkat Moshe 2017-2019, 2021</li>
-            <li>Reichman University Comp-Sci 2021-present</li>
-        </ul>
+       <div class="timeline">
+           <div class="timeline-container left">
+               <div class="timeline-content">
+                   <h2>2004-2013</h2>
+                   <p>Barkai Elementary School</p>
+               </div>
+           </div>
+           <div class="timeline-container right">
+               <div class="timeline-content">
+                   <h2>2013-2017</h2>
+                   <p>YDE Highschool</p>
+               </div>
+           </div>
+           <div class="timeline-container left">
+               <div class="timeline-content">
+                   <h2>2017-2019, 2021</h2>
+                   <p>Yeshivat Birkat Moshe</p>
+               </div>
+           </div>
+           <div class="timeline-container right">
+               <div class="timeline-content">
+                   <h2>2021-present</h2>
+                   <p>Reichman University comp-sci</p>
+               </div>
+           </div>
+       </div>
+
        <h2 >Skills</h2>
        <ul>
            <li>Coding Languages
@@ -76,6 +157,12 @@
            <li>Woodworking</li>
        </ul>
    </div>
+    <div id="cv">
+        <h3>CV</h3>
+        <button id="cv-button" onclick="viewCv()">Click to view CV</button>
+        <a href="website_media/Resume.pdf" download="david_dusi_resume.pdf">Download</a>
+        <iframe id="cv-pdf" src="website_media/Resume.pdf" style="display: none"></iframe>
+    </div>
 </section>
 <section id ="army-service">
     <h2>Army Service</h2>
@@ -107,7 +194,9 @@
     <div>
         Email: david.dusi@post.runi.il <br>
         <div class="badge-base LI-profile-badge" data-locale="en_US" data-size="medium" data-theme="light" data-type="HORIZONTAL" data-vanity="david-d-929172208" data-version="v1">
-            LinkedIn: <a class="badge-base__link LI-simple-link" href="https://il.linkedin.com/in/david-d-929172208?trk=profile-badge">David D.</a>
+            <a class="badge-base__link LI-simple-link" href="https://il.linkedin.com/in/david-d-929172208?trk=profile-badge" target="_blank">
+            <i class="fa fa-linkedin"></i>
+            </a>
         </div>
 
     </div>
