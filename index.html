@@ -11,20 +11,20 @@
 <body>
 <header>
     <nav id="nav">
-        <a href="/" title="Home">
-            <img id="logo" src="website_media/DD.png" >
+        <a href="#home" title="Home">
+            <img id="logo" src="website_media/DD.webp" alt="logo">
         </a>
         <div  id="pages" >
             <a class="sections" href="#about-me">About</a>
             <a class="sections" href="#hobbies">Hobbies</a>
-            <a class="sections" href="#experience">Education</a>
+            <a class="sections" href="#education">Education</a>
             <a class="sections" href="#contact-me">Contact</a>
         </div>
         <!-- resize script -->
         <script src="js/resize.js"></script>
 
         <div id="social-media">
-            <a class="sm-icon" href="mailto:david.dusi@hotmail.com" title="email" target="_blank" >
+            <a class="sm-icon" href="mailto:david.dusi@post.runi.ac.il" title="email" target="_blank" >
                 <i class="fa fa-envelope"></i>
             </a> <br>
             <a class="sm-icon" href="https://il.linkedin.com/in/david-d-929172208?trk=profile-badge" title="linkedin" target="_blank">
@@ -36,85 +36,51 @@
             <i class="fa fa-bars"></i>
         </a>
     </nav>
+    <script src="js/scroll.js"></script>
 </header>
+
+<section id="home" class="home-tag">
+    <img id="home-img" src="website_media/me.webp" alt="me">
+    <div id="home-text">
+        <h2 id="hello">Hi, I am David, a computer science student at Reichman University</h2>
+        <button onclick="location.href='#contact-me'" id="contact-me-button">Contact Me</button>
+    </div>
+</section>
 
 <section id="about-me">
     <div id="about-me-div">
+        <div class="parallax"></div>
         <h2 id="about-me-title">About Me</h2>
-        <p id="about-me-p">My name is David Dusi, I'm 23 years old and currently studying Computer Science in Reichman University.
-            I was born and raised as an Orthodox Jew in the Brooklyn Syrian Community.
-            At the age of 18 I came to Israel as part of a gap year program and studied in Yeshivat Birkat Moshe.
-            From the second I stepped foot in Israel I fell in love with the people and culture and decided to stay.
-            I joined the Hesder Army program in my yeshiva and drafted to the IDF in August 2019.
-            I served in the Combat Engineering unit for 20 months.
-            After my service I decided I want to study Computer Science and chose Reichman University's program.
+        <p id="about-me-p">My name is David Dusi, I'm 23 years old and was born and raised in Brooklyn NY. I studied judaic studies in Yeshivat
+            Birkat Moshe for two years before pursuing a Computer Science degree at Reichman University.
         </p>
     </div>
-
-    <img id="about-me-img" id="skydive" src="website_media/skydiving.jpg" alt="skydive image">
 </section>
 
 <section id="hobbies">
     <h2 id="hobbies-title">Hobbies</h2>
-    <div>
-        <h3 class="hobby-titles" id="sports" >Sports</h3>
-        <img class="hobby-pic" src="website_media/hockey.jpg" alt=""><br>
-        <img class="hobby-pic" src="website_media/marathon.jpeg" alt=""> <br>
-        <img class="hobby-pic" src="website_media/snowboarding.jpg" alt=""> <br>
-
-    </div>
-    <div>
-        <h3 class="hobby-titles" id="woodworking">Woodworking</h3>
-        <img class="hobby-pic" src="website_media/skateboard4.jpg" alt="">
-        <img class="hobby-pic" src="website_media/skateboard3.jpg" alt="">
-    </div>
-    <div>
-        <h3 class="hobby-titles" id="hiking">Hiking</h3>
-        <!-- <img class="hobby-pic" src="website_media/hiking3.jpeg" alt="">
-        <img class="hobby-pic" src="website_media/hiking2.jpg" alt=""><br>
-        <img class="hobby-pic" src="website_media/hiking1.jpg" alt="">
-        <img class="hobby-pic" src="website_media/hiking4.jpg" alt="">
-        <div class="slideshow-container"> -->
-
-            <!-- Full-width images with number and caption text -->
-            <div class="mySlides fade">
-                <img src="website_media/hiking3.jpeg" style="width:100%">
-                <div class="text">Caption Text</div>
-            </div>
-
-            <div class="mySlides fade">
-                <img src="website_media/hiking2.jpg" style="width:100%">
-                <div class="text">Caption Two</div>
-            </div>
-
-            <div class="mySlides fade">
-                <img src="website_media/hiking1.jpg" style="width:100%">
-                <div class="text">Caption Three</div>
-            </div>
-
-            <div class="mySlides fade">
-                <img src="website_media/hiking4.jpg" style="width:100%">
-                <div class="text">Caption Three</div>
-            </div>
-
-            <!-- Next and previous buttons -->
-            <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
-            <a class="next" onclick="plusSlides(1)">&#10095;</a>
+    <div class="hobby-list">
+        <div class="hobby">
+            <p>Snowboarding</p>
         </div>
-        <br>
-
-        <!-- The dots/circles -->
-        <div style="text-align:center">
-            <span class="dot" onclick="currentSlide(1)"></span>
-            <span class="dot" onclick="currentSlide(2)"></span>
-            <span class="dot" onclick="currentSlide(3)"></span>
-            <span class="dot" onclick="currentSlide(4)"></span>
+        <div class="hobby" id="football">
+            <p>Football</p>
         </div>
+        <div id="woodworking" class="hobby">
+            <p>Woodworking</p>
+        </div>
+        <div id="hiking" class="hobby">
+            <p>Hiking</p>
+        </div>
+
     </div>
+
+
 </section>
+
 <section id="education">
    <div>
-        <h2>Education</h2>
+        <h2 id="education-title">Education</h2>
        <div class="timeline">
            <div class="timeline-container left">
                <div class="timeline-content">
@@ -136,73 +102,56 @@
            </div>
            <div class="timeline-container right">
                <div class="timeline-content">
+                   <h2>2019-2021</h2>
+                   <p>Served in the IDF as a sergent in Combat engineering</p>
+               </div>
+           </div>
+           <div class="timeline-container left">
+               <div class="timeline-content">
                    <h2>2021-present</h2>
-                   <p>Reichman University comp-sci</p>
+                   <p>Reichman University Computer Science Bsc.</p>
                </div>
            </div>
        </div>
-
-       <h2 >Skills</h2>
-       <ul>
-           <li>Coding Languages
-                <ul>
-                    <li>Java</li>
-                    <li>Python</li>
-                    <li>C</li>
-                    <li>HTML</li>
-                    <li>JavaScript</li>
-                    <li>CSS</li>
-                </ul>
-           </li>
-           <li>Woodworking</li>
-       </ul>
+       <div class="code-screen">
+       <pre>Coding languages I know: <code id="code"></code></pre>
+           <script src="js/type-coding.js"></script>
+       </div>
    </div>
-    <div id="cv">
-        <h3>CV</h3>
-        <button id="cv-button" onclick="viewCv()">Click to view CV</button>
-        <a href="website_media/Resume.pdf" download="david_dusi_resume.pdf">Download</a>
-        <iframe id="cv-pdf" src="website_media/Resume.pdf" style="display: none"></iframe>
-    </div>
 </section>
-<section id ="army-service">
-    <h2>Army Service</h2>
-    <ol>
-        <li>4 months Basic training</li>
-        <li>4 months Advanced training</li>
-        <li>4 months Sergent Course</li>
-        <li>8 months Sergent in basic + advanced training</li>
-    </ol>
-    <img class="hobby-pic" src="website_media/army8month.jpeg" alt="">
-    <img class="hobby-pic" src="website_media/army2.jpeg" alt=""><br>
-    <img class="hobby-pic" src="website_media/armyMak.jpeg" alt="">
-    <img class="hobby-pic" src="website_media/army1.jpg" alt="">
-</section>
+
 <section id="contact-me">
     <h2>Contact Me</h2>
     <form id="contact-form" action="">
-        <label for="fname">First name:</label><br>
-        <input type="text" id="fname" name="fname"><br>
-        <label for="lname">Last name:</label><br>
-        <input type="text" id="lname" name="lname"><br>
-        <label for="email">Email:</label><br>
-        <input type="text" id="email" name="email"><br>
-        <label for="message">Message:</label><br>
-        <textarea id="message" ></textarea><br><br>
-        <input type="submit" value="Send">
+        <label class="form-label" for="fname">First name:</label>
+        <input class="form-box" type="text" id="fname" name="fname" placeholder="John">
+        <label class="form-label" for="lname">Last name:</label>
+        <input class="form-box" type="text" id="lname" name="lname" placeholder="Doe">
+        <label class="form-label" for="email">Email:</label>
+        <input class="form-box" type="text" id="email" name="email" placeholder="john.doe@example.com">
+        <label class="form-label" for="message">Message:</label>
+        <textarea  id="message" placeholder="Your message..."></textarea>
+        <input id="form-button" type="submit" value="Send">
     </form>
-    <br>
-    <div>
-        Email: david.dusi@post.runi.il <br>
-        <div class="badge-base LI-profile-badge" data-locale="en_US" data-size="medium" data-theme="light" data-type="HORIZONTAL" data-vanity="david-d-929172208" data-version="v1">
-            <a class="badge-base__link LI-simple-link" href="https://il.linkedin.com/in/david-d-929172208?trk=profile-badge" target="_blank">
-            <i class="fa fa-linkedin"></i>
-            </a>
-        </div>
 
+    <div class="sm">
+        Email:
+        <a class="contact-icon" href="mailto:david.dusi@post.runi.ac.il" title="email" target="_blank" >
+            <i class="fa fa-envelope"></i>
+        </a>
     </div>
-</section>
-<br>
+    <div class="sm">
+        LinkedIn:
+        <a class="contact-icon" href="https://il.linkedin.com/in/david-d-929172208?trk=profile-badge" target="_blank">
+            <i class="fa fa-linkedin"></i>
+        </a>
+    </div>
 
-<button onclick="clickButton()">Click Me</button>
+</section>
+
+<footer>
+    <p>David Dusi -
+        <a href="mailto:david.dusi@post.runi.ac.il">david.dusi@post.runi.ac.il</a></p>
+</footer>
 </body>
 </html>

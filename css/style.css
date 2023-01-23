@@ -1,18 +1,16 @@
 * {
     box-sizing: border-box;
 }
-
 body {
     margin: 0;
 }
-
 :root {
-    background-color: #8ab4f8;
+    background-color: peachpuff;
 }
 
 /* nav bar */
 #logo {
-    height: 45px;
+    height: 75px;
     top: 0;
     left: 0;
     position: absolute;
@@ -28,12 +26,13 @@ body {
     top: 0;
     padding-top: 35px;
     margin: 0;
-    height: 50px;
+    height: 75px;
+    z-index: 500;
 }
 .icon {
     color: white;
     padding: 10px;
-    font-size: 24px;
+    font-size: 48px;
     top: 0;
     right: 0;
     position: absolute;
@@ -41,7 +40,6 @@ body {
 .icon:hover {
     background-color: #8ab4f8;
 }
-
 #nav #pages {
     display: none;
     flex-direction: column;
@@ -50,7 +48,6 @@ body {
 #social-media {
     display: none;
 }
-
 #nav .sections {
     color: white;
     padding: 14px 16px;
@@ -61,68 +58,128 @@ body {
     font-style: normal;
     letter-spacing: 0.08em;
 }
-
 .sections:hover {
     background-color: #8ab4f8;
 }
 
+/* Home page */
+#home {
+    margin-top: 30px;
+    padding: 10%;
+    text-align: center;
+    height: 800px;
 
-#skydive {
-    width: 80%;
 }
-
-.hobby-pic {
-    width: 100%;
+.home-tag #home-img {
+    width: 75%;
+    height: auto;
+    border-radius: 50%;
+    align-self: center;
 }
-
+.home-tag #hello  {
+    text-align: justify;
+    color: #2d323d;
+    letter-spacing: 0.05em; /*leave or keep? */
+    padding-left: 5%;
+    padding-right: 5%;
+}
+#contact-me-button {
+    background-color: #2d323d;
+    border: none;
+    color: peachpuff;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+}
+#contact-me-button:hover {
+    background-color: #8ab4f8;
+}
 
 /*about me section*/
 #about-me {
-    display: grid;
-    grid-template: 1fr 1fr / 100%;
-    margin-top: 30px;
+    height: 700px;
+    color: #2d323d;
 }
-#about-me-div {
-    grid-area: 2;
-    margin-left: 10px;
-    margin-right: 10px;
+.parallax{
+    background-image: url("../website_media/skydiving.webp");
+    background-size: cover;
+    min-height: 400px;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
 
 }
-#about-me-title {
-text-align: center;
-}
-#about-me-img {
-    width: 100%;
-    height: auto;
-    border-radius: 0;
+#about-me-div #about-me-p {
+    background-color: #2d323d;
+    color: white;
+    text-align: center;
+    border-radius: 25px;
+    width: 80%;
+    padding: 20px;
     align-self: center;
-    grid-area: 1;
+}
+#about-me-div {
+    display: flex;
+    flex-direction: column;
+}
+#about-me-title {
+    text-align: center;
+
 }
 
 /*hobbies section*/
 #hobbies {
-    display: grid;
-    grid-template-rows: 25px 1fr 1fr 1fr;
+    display: flex;
+    flex-direction: column;
+    color: #2d323d;
 }
-#hobbies-title {
+#hobbies #hobbies-title {
+    align-self: center;
+}
+.hobby-list {
+    display: inline-flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+
+
+
+}
+.hobby {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #2d323d;
+    color: white;
     text-align: center;
+    border-radius: 25px;
+    width: 40%;
+    padding: 10px;
     margin: 10px;
-}
-.hobby-titles {
-    text-align: center;
 
 }
 
 /*Education*/
+#education {
+    background-color: #2d323d;
+
+}
+#education-title {
+    text-align: center;
+    padding: 30px;
+    color: white;
+}
 /* The actual timeline (the vertical ruler) */
 .timeline {
-    background-color: #474e5d;
     font-family: Helvetica, sans-serif;
     position: relative;
     max-width: 100%;
     margin: 0 auto;
 }
-
 /* The actual timeline (the vertical ruler) */
 .timeline::after {
     content: '';
@@ -134,7 +191,6 @@ text-align: center;
     left: 50%;
     margin-left: -3px;
 }
-
 /* Container around content */
 .timeline-container {
     padding: 10px 40px;
@@ -142,7 +198,6 @@ text-align: center;
     background-color: inherit;
     width: 50%;
 }
-
 /* The circles on the timeline */
 .timeline-container::after {
     content: '';
@@ -151,22 +206,19 @@ text-align: center;
     height: 25px;
     right: -17px;
     background-color: white;
-    border: 4px solid #FF9F55;
+    border: 4px solid peachpuff;
     top: 15px;
     border-radius: 50%;
     z-index: 1;
 }
-
 /* Place the container to the left */
 .left {
     left: 0;
 }
-
 /* Place the container to the right */
 .right {
     left: 50%;
 }
-
 /* Add arrows to the left container (pointing right) */
 .left::before {
     content: " ";
@@ -180,7 +232,6 @@ text-align: center;
     border-width: 10px 0 10px 10px;
     border-color: transparent transparent transparent white;
 }
-
 /* Add arrows to the right container (pointing left) */
 .right::before {
     content: " ";
@@ -194,12 +245,10 @@ text-align: center;
     border-width: 10px 10px 10px 0;
     border-color: transparent white transparent transparent;
 }
-
 /* Fix the circle for containers on the right side */
 .right::after {
     left: -16px;
 }
-
 /* The actual content */
 .timeline-content {
     padding: 15px 30px;
@@ -208,15 +257,121 @@ text-align: center;
     border-radius: 6px;
 }
 
+/* Coding Languages */
+.code-screen {
+    color: #abb2bf;
+    font-size: 23px;
+    text-align: left;
+    font-family: monospace;
+    padding: 20px;
+}
+
+/* contact me page */
+#contact-me {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+#contact-me h2 {
+    color: #2d323d;
+}
+#contact-form {
+    display: grid;
+    grid-template-rows: repeat(5, 1fr);
+    grid-template-columns: 1fr 2fr;
+    background-color: #2d323d;
+    padding: 15px;
+    color: white;
+    border-radius: 6px;
+    width: 70%;
+    font-size: 20px;
+
+}
+#contact-form .form-label {
+    grid-column: 1;
+}
+#contact-form .form-box {
+    grid-column: 2;
+
+}
+input {
+    height: 20px;
+}
+#contact-form #message {
+    resize: none;
+}
+#form-button {
+    margin-top: 15px;
+    grid-column: 2;
+    margin-left: 60%;
+    background-color: #2d323d;
+    border: none;
+    color: peachpuff;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    cursor: pointer;
+}
+.sm {
+    font-size: 20px;
+    color: #2d323d;
+}
+.contact-icon {
+    color: #2d323d;
+}
+
+/* footer */
+footer {
+    text-align: center;
+    padding: 3px;
+    background-color: #2d323d;
+    color: white;
+}
+footer a {
+    color: white;
+}
 
 /* Extra small devices (phones, 600px and down) */
 @media only screen and (max-width: 600px) {
     .sections { padding: 16px 10px; }
+    /* Place the timelime to the left */
+    .timeline::after {
+        left: 31px;
+    }
+
+    /* Full-width containers */
+    .timeline-container {
+        width: 100%;
+        padding-left: 70px;
+        padding-right: 25px;
+    }
+
+    /* Make sure that all arrows are pointing leftwards */
+    .timeline-container::before {
+        left: 60px;
+        border: medium solid white;
+        border-width: 10px 10px 10px 0;
+        border-color: transparent white transparent transparent;
+    }
+
+    /* Make sure all circles are at the same spot */
+    .left::after, .right::after {
+        left: 15px;
+    }
+
+    /* Make all right containers behave like the left ones */
+    .right {
+        left: 0%;
+    }
 
 }
 
 /* Small devices (portrait tablets and large phones, 600px and up) */
-@media only screen and (min-width: 600px) {
+@media only screen and (min-width: 600px){
+   /* nav bar big screen */
     #nav {
         display: flex;
         justify-content: space-between;
@@ -250,28 +405,162 @@ text-align: center;
         margin-right: 10px;
         color: white;
     }
-
     .sections{
         color: white;
         text-align: center;
         text-decoration: none;
     }
+
+    /* home page big screen */
+    #home {
+        display: flex;
+        flex-direction: row-reverse;
+
+    }
+    .home-tag #home-img {
+        width: 35%;
+        min-height: 100px;
+        min-width: 250px;
+    }
+    .home-tag #home-text {
+        align-self: center;
+        justify-self: center;
+    }
+
+    /*about me big screen */
+    #about-me-div #about-me-p {
+        width: 60%;
+    }
+    .parallax {
+        min-height: 500px;
+    }
+    /* contact big screen */
+    #contact-form {
+        width: 550px;
+    }
+
 }
 
 /* Medium devices (landscape tablets, 768px and up) */
 @media only screen and (min-width: 768px) {
     .sections { padding: 16px 24px; }
-    #about-me { grid-template: 24px 1fr / 50% 50%; }
-    #about-me-div { grid-area: 2; }
-    #about-me-img { grid-area: 2 / 2 ; border-radius: 10%;}
+    .sections { padding: 16px 24px; }
 }
 
-/* Large devices (laptops/desktops, 992px and up) */
-@media only screen and (min-width: 992px) {
+@media only screen and (max-device-width: 600px) {
+    /* nav bar */
+    #nav {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .icon {
+        display: block;
+    }
+    .icon:hover {
+        background-color: #8ab4f8;
+    }
+    #nav #pages {
+        display: none;
+        flex-direction: column;
 
-}
+    }
+    #social-media {
+        display: none;
+    }
+    #nav .sections {
+        font-size: 48px;
+    }
 
-/* Extra large devices (large laptops and desktops, 1200px and up) */
-@media only screen and (min-width: 1200px) {
+    /* home mobile */
+    #home {
+        flex-direction: column;
+        height: max-content;
+    }
+    .home-tag #home-img {
+        width: max-content;
+        height: max-content;
+        border-radius: 0;
+    }
+    .home-tag #home-text {
+        font-size: 48px;
+    }
+    #contact-me-button {
+        font-size: 48px;
+    }
+    /* about me mobile */
+    #about-me {
+        height: 1300px;
+    }
+    .parallax {
+        min-height: 800px;
+    }
+    #about-me-title {
+        font-size: 48px;
+    }
+    #about-me-p {
+        font-size: 36px;
+    }
+
+    /* hobbies mobile */
+    #hobbies-title {
+        font-size: 48px;
+    }
+    .hobby {
+        font-size: 36px;
+    }
+
+    /* education mobile */
+    /* Place the timelime to the left */
+    .timeline::after {
+        left: 31px;
+    }
+
+    /* Full-width containers */
+    .timeline-container {
+        width: 100%;
+        padding-left: 70px;
+        padding-right: 25px;
+    }
+
+    /* Make sure that all arrows are pointing leftwards */
+    .timeline-container::before {
+        left: 60px;
+        border: medium solid white;
+        border-width: 10px 10px 10px 0;
+        border-color: transparent white transparent transparent;
+    }
+
+    /* Make sure all circles are at the same spot */
+    .left::after, .right::after {
+        left: 15px;
+    }
+
+    /* Make all right containers behave like the left ones */
+    .right {
+        left: 0%;
+    }
+    .timeline-content {
+        font-size: 36px;
+    }
+
+    .code-screen {
+        font-size: 44px;
+    }
+
+    /* form mobile */
+    #contact-me {
+        height: 500px;
+    }
+    #contact-me h2{
+        font-size: 48px;
+    }
+    #contact-form {
+        display: none;
+    }
+    .sm {
+        font-size: 36px;
+    }
+
 
 }
