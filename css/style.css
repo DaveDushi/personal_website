@@ -26,10 +26,12 @@ body {
     top: 0;
     padding-top: 35px;
     margin: 0;
-    height: 75px;
+    height: 10%;
     z-index: 500;
 }
 .icon {
+    background: none;
+    border: none;
     color: white;
     padding: 10px;
     font-size: 48px;
@@ -40,10 +42,9 @@ body {
 .icon:hover {
     background-color: #8ab4f8;
 }
-#nav #pages {
+.before-click {
     display: none;
     flex-direction: column;
-
 }
 #social-media {
     display: none;
@@ -61,7 +62,13 @@ body {
 .sections:hover {
     background-color: #8ab4f8;
 }
-
+.after-click {
+    display: flex;
+}
+#nav.nav-after-click {
+    height: auto;
+    background-color: rgba(0,0,0,.7);
+}
 /* Home page */
 #home {
     margin-top: 30px;
@@ -101,7 +108,7 @@ body {
 
 /*about me section*/
 #about-me {
-    height: 700px;
+    height: 80%;
     color: #2d323d;
 }
 .parallax{
@@ -278,7 +285,7 @@ body {
 }
 #contact-form {
     display: grid;
-    grid-template-rows: repeat(5, 1fr);
+    grid-template-rows: repeat(4, 1fr);
     grid-template-columns: 1fr 2fr;
     background-color: #2d323d;
     padding: 15px;
@@ -390,6 +397,9 @@ footer a {
         padding: 0;
         margin: 0;
     }
+    #nav.nav-after-click {
+        height: 10%;
+    }
     .icon {
         display: none;
     }
@@ -438,7 +448,7 @@ footer a {
         width: 60%;
     }
     .parallax {
-        min-height: 500px;
+        height: 60%;
     }
     /* contact big screen */
     #contact-form {
@@ -469,119 +479,12 @@ footer a {
 }
 
 @media only screen and (max-device-width: 600px) {
-    /* nav bar */
-    #nav {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-    }
-    .icon {
-        display: block;
-    }
-    .icon:hover {
-        background-color: #8ab4f8;
-    }
-    #nav #pages {
-        display: none;
-        flex-direction: column;
-
-    }
-    #social-media {
-        display: none;
-    }
-    #nav .sections {
-        font-size: 48px;
-    }
-
     /* home mobile */
     #home {
         flex-direction: column;
         height: max-content;
+        justify-items: center;
+        margin-top: 20%;
     }
-    .home-tag #home-img {
-        width: max-content;
-        height: max-content;
-        border-radius: 0;
-    }
-    .home-tag #home-text {
-        font-size: 48px;
-    }
-    #contact-me-button {
-        font-size: 48px;
-    }
-    /* about me mobile */
-    #about-me {
-        height: 1300px;
-    }
-    .parallax {
-        min-height: 800px;
-    }
-    #about-me-title {
-        font-size: 48px;
-    }
-    #about-me-p {
-        font-size: 36px;
-    }
-
-    /* hobbies mobile */
-    #hobbies-title {
-        font-size: 48px;
-    }
-    .hobby {
-        font-size: 36px;
-    }
-
-    /* education mobile */
-    /* Place the timelime to the left */
-    .timeline::after {
-        left: 31px;
-    }
-
-    /* Full-width containers */
-    .timeline-container {
-        width: 100%;
-        padding-left: 70px;
-        padding-right: 25px;
-    }
-
-    /* Make sure that all arrows are pointing leftwards */
-    .timeline-container::before {
-        left: 60px;
-        border: medium solid white;
-        border-width: 10px 10px 10px 0;
-        border-color: transparent white transparent transparent;
-    }
-
-    /* Make sure all circles are at the same spot */
-    .left::after, .right::after {
-        left: 15px;
-    }
-
-    /* Make all right containers behave like the left ones */
-    .right {
-        left: 0%;
-    }
-    .timeline-content {
-        font-size: 36px;
-    }
-
-    .code-screen {
-        font-size: 44px;
-    }
-
-    /* form mobile */
-    #contact-me {
-        height: 500px;
-    }
-    #contact-me h2{
-        font-size: 48px;
-    }
-    #contact-form {
-        display: none;
-    }
-    .sm {
-        font-size: 36px;
-    }
-
 
 }

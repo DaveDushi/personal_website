@@ -3,6 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <title>My Webite</title>
+    <meta name="description" content="David Dusi's portfolio website">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="css/style.css">
     <script src="js/utils.js"></script>
     <!-- icons style sheet -->
@@ -14,15 +16,13 @@
         <a href="#home" title="Home">
             <img id="logo" src="website_media/DD.webp" alt="logo">
         </a>
-        <div  id="pages" >
+        <div  id="pages" class="before-click pages">
             <a class="sections" href="#about-me">About</a>
             <a class="sections" href="#hobbies">Hobbies</a>
             <a class="sections" href="#education">Education</a>
             <a class="sections" href="notfound.html">Employment</a>
             <a class="sections" href="#contact-me">Contact</a>
         </div>
-        <!-- resize script -->
-        <script src="js/resize.js"></script>
 
         <div id="social-media">
             <a class="sm-icon" href="mailto:david.dusi@post.runi.ac.il" title="email" target="_blank" >
@@ -33,9 +33,9 @@
             </a>
 
         </div>
-        <a href="javascript:void(0);" class="icon" onclick="openNav()">
+        <button class="icon" onclick="openNav()">
             <i class="fa fa-bars"></i>
-        </a>
+        </button>
     </nav>
     <script src="js/scroll.js"></script>
 </header>
@@ -123,24 +123,16 @@
 
 <section id="contact-me">
     <h2>Contact Me</h2>
-    <form id="contact-form" action="">
+    <form name="contact-form" id="contact-form" action="" onsubmit="return ValidationForm()" method="post" enctype="text/plain">
         <label class="form-label" for="fname">First name:</label>
         <input class="form-box" type="text" id="fname" name="fname" placeholder="John">
         <label class="form-label" for="lname">Last name:</label>
         <input class="form-box" type="text" id="lname" name="lname" placeholder="Doe">
-        <label class="form-label" for="email">Email:</label>
-        <input class="form-box" type="text" id="email" name="email" placeholder="john.doe@example.com">
         <label class="form-label" for="message">Message:</label>
-        <textarea  id="message" placeholder="Your message..."></textarea>
+        <textarea  id="message" name="message" placeholder="Your message..."></textarea>
         <input id="form-button" type="submit" value="Send">
     </form>
 
-    <div class="sm">
-        Email:
-        <a class="contact-icon" href="mailto:david.dusi@post.runi.ac.il" title="email" target="_blank" >
-            <i class="fa fa-envelope"></i>
-        </a>
-    </div>
     <div class="sm">
         LinkedIn:
         <a class="contact-icon" href="https://il.linkedin.com/in/david-d-929172208?trk=profile-badge" target="_blank">
